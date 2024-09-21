@@ -21,6 +21,10 @@ func main() {
 
 	// Category
 	r.GET("/api/category", categorycontroller.Index)
+	r.GET("/api/category/:id", categorycontroller.Show)
+	r.POST("/api/category", categorycontroller.Create)
+	r.PUT("/api/category/:id", categorycontroller.Update)
+	r.DELETE("/api/category", categorycontroller.Delete)
 
 	r.Run()
 }
